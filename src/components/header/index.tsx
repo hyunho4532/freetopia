@@ -1,8 +1,13 @@
 import Image from 'next/image'
 import './index.scss'
 import '../../app/styles/@media/index.scss'
+import { LoginPopup } from '@/features/service/dialog';
+import { dialogState } from '@/features/store/state';
 
 export function Header() {
+
+    const loginState = dialogState((state: any) => state.login);
+
     return (
         <div className="parent">
             <header className="header">
@@ -10,12 +15,11 @@ export function Header() {
                     <Image className='img' src="/logo.png" width={50} height={50} alt={''} />
                 </div>
                 <div className="gnb">
-                    <a href="#">로그인</a>
-                    <a href="#">작성함</a>
-                    <a href="#">분석함</a>
+                    <p onClick={() => LoginPopup(loginState)}>로그인</p>
+                    <p>작성함</p>
+                    <p>분석함</p>
                 </div>
                 <div className="profile">
-                    <img src="" />
                 </div>
             </header>
         </div>
