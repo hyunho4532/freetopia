@@ -1,0 +1,24 @@
+/** 헤더창 @media */
+@media (max-width: 834px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .gnb {
+        font-size: 13px;
+        justify-content: center;
+    }
+
+    .logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .logo .img {
+        text-align: center;
+    }
+
+    .profile {
+        text-align: center;
+    }
+}
