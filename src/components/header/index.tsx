@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import './index.scss'
-import '../../app/styles/@media/index.scss'
+import '../../app/styles/@media/header/index.scss'
 import { LoginPopup } from '@/features/service/dialog';
 import { dialogState } from '@/features/store/state';
 

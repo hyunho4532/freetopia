@@ -5,6 +5,4 @@ import { dialogState } from "../store/state"
  */
 export function LoginPopup(loginState: any) {
     dialogState.getState().setLogin(!loginState);
-
-    const updatedState = dialogState.getState().login;
 }

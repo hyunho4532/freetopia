@@ -1,0 +1,23 @@
+.loginbody {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.loginbody .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.loginbody .subtitle {
+    margin-top: 16px;
+}
+
+.loginform {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.loginform .img {
+    cursor: pointer;
+}
