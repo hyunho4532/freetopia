@@ -6,7 +6,8 @@
 
 import { dialogState } from "@/features/store/state"
 import { Dialog } from "@mui/material"
-import './index.scss'
+import '../../app/styles/@common/dialog/index.scss'
+import '../../app/styles/@media/dialog/index.scss'
 import Image from "next/image"
 
 type Props = {
@@ -36,6 +37,8 @@ export function LoginDialog({ popup }: Props) {
                 <Image className="img" width={60} height={60} src="/google.png" alt="구글 로그인" />
                 <Image className="img" width={60} height={60} src="/kakao.svg" alt="카카오 로그인" />
             </div>
+
+            <button className="loginbtn">직접 회원가입</button>
 
         </Dialog>
     )

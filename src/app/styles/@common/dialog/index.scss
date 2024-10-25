@@ -15,9 +15,19 @@
 .loginform {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .loginform .img {
     cursor: pointer;
+}
+
+.loginbtn {
+    width: 280px;
+    height: 60px;
+    background-color: gray;
+    margin: 70px auto;
+    border-radius: 24px;
+    color: white;
+    font-weight: bold;
 }
