@@ -9,6 +9,7 @@ import { Dialog } from "@mui/material"
 import '../../app/styles/@common/dialog/index.scss'
 import '../../app/styles/@media/dialog/index.scss'
 import Image from "next/image"
+import { loginClick } from "@/features/service/login"
 
 type Props = {
     popup: boolean
@@ -34,7 +35,13 @@ export function LoginDialog({ popup }: Props) {
             </div>
 
             <div className="loginform">
-                <Image className="img" width={60} height={60} src="/google.png" alt="구글 로그인" />
+                <Image 
+                    className="img" 
+                    width={60} 
+                    height={60} 
+                    src="/google.png" 
+                    alt="구글 로그인"
+                    onClick={() => loginClick()} />
                 <Image className="img" width={60} height={60} src="/kakao.svg" alt="카카오 로그인" />
             </div>
 

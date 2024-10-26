@@ -2,11 +2,15 @@ import Image from 'next/image'
 import '../../app/styles/@common/header/index.scss'
 import '../../app/styles/@media/header/index.scss'
 import { LoginPopup } from '@/features/service/dialog';
-import { dialogState } from '@/features/store/state';
+import { useDialogState } from '@/features/store/state';
 
-export function Header() {
+type Props = {
+    userData: any
+}
 
-    const loginState = dialogState((state: any) => state.login);
+export function Header({ userData }: Props) {
+
+    const loginState = useDialogState((state: any) => state.login);
 
     return (
         <div className="parent">
