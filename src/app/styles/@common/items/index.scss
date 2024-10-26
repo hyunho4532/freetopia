@@ -1,0 +1,16 @@
+.items {
+    display: flex;
+}
+
+.items .card {
+    width: 210px;
+    height: 180px;
+    margin-top: 16px;
+    background-color: aliceblue;
+}
+
+.items .card p {
+    font-size: 14px;
+    padding-left: 8px;
+    padding-top: 8px;
+}
