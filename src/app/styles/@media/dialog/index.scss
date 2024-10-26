@@ -1,3 +1,4 @@
+/** 로그인 다이얼로그 스타일링 **/
 @media (max-width: 834px) {
     .loginbody .title {
         font-size: 16px;
@@ -15,5 +16,25 @@
     .loginbtn {
         width: 240px;
         height: 40px;
+    }
+}
+
+/** 작성 다이얼로그 스타일링 **/
+@media (max-width: 834px) {
+    .inputbody .title {
+        font-size: 16px;
+    }
+
+    .inputform p {
+        font-size: 14px;
+    }
+
+    .inputform input {
+        width: 220px;
+    }
+
+    .writeBtn {
+        width: 270px;
+        font-size: 12px;
     }
 }

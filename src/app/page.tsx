@@ -2,12 +2,13 @@
 
 import { Body } from "@/components/body";
 import { LoginDialog } from "@/components/dialog/login";
+import { WriteDialog } from "@/components/dialog/write";
 import { Header } from "@/components/header";
 import { useFetchUser, useGetUser } from "@/features/service/common";
 import { useDialogState } from "@/features/store/state";
 
 export default function Home() {
-  const loginPopup = useDialogState((state: any) => state.login);
+  const dialogState = useDialogState((state: any) => state);
 
   /** zustand에 관리된 사용자 데이터들을 가져온다. */
   const userData = useGetUser();
@@ -19,7 +20,8 @@ export default function Home() {
     <div>
       <Header userData={userData} />
       <Body />
-      { loginPopup && <LoginDialog popup={loginPopup} /> }
+      { dialogState.login && <LoginDialog popup={dialogState.login} /> }
+      { dialogState.write && <WriteDialog popup={dialogState.write} /> }
     </div>
   );
 }

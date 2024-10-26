@@ -1,3 +1,4 @@
+import { write } from "fs";
 import { create } from "zustand";
 
 /**
@@ -7,5 +8,9 @@ import { create } from "zustand";
 export const useDialogState = create((set: any) => ({
     /** 1-3. 로그인 관련 팝업 창, 헤더에서 로그인 버튼을 클릭했을 때 */
     login: false,
-    setLogin: (isOpen: boolean) => set({ login: isOpen })
+    /** 1-4. 작성함 관련 팝업 창, 헤더에서 작성함 버튼을 클릭했을 때 */
+    write: false,
+
+    setLogin: (isLogin: boolean) => set({ login: isLogin }),
+    setWrite: (isWrite: boolean) => set({ write: isWrite })
 }))
