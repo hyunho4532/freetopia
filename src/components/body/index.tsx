@@ -3,6 +3,8 @@ import '../../app/styles/@common/body/index.scss'
 import '../../app/styles/@media/body/index.scss'
 import { useEffect, useState } from 'react'
 import { WriteItems } from '../items/writeItem';
+import tipData from '../../../schema/data.json';
+import { TipItems } from '../items/tipItem';
 
 export function Body() {
 
@@ -20,6 +22,7 @@ export function Body() {
             <div className="content">
                 <div className="first">
                     <p>관련 정보 수집 - 분석</p>
+                    <TipItems tipData={tipData} />
                 </div>
 
                 <div className="second">
