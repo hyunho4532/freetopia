@@ -6,10 +6,5 @@ import { create } from "zustand";
 export const useUserState = create((set: any) => ({
     id: '',
     email: '',
-    name: '',
-    setUserData: (id: string, email: string, name: string) => set({
-        id: id,
-        email: email,
-        name: name
-    })
+    name: ''
 }))

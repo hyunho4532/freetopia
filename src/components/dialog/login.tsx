@@ -4,7 +4,7 @@
  * 2. 로그인 진행 후 간단한 정보 입력
  */
 
-import { dialogState } from "@/features/store/state"
+import { useDialogState } from "@/features/store/state"
 import { Dialog } from "@mui/material"
 import '../../app/styles/@common/dialog/index.scss'
 import '../../app/styles/@media/dialog/index.scss'
@@ -26,7 +26,7 @@ export function LoginDialog({ popup }: Props) {
             }}
             open={popup}
             onClose={() => {
-                dialogState.getState().setLogin(false);
+                useDialogState.getState().setLogin(false);
             }}>
 
             <div className="loginbody">

@@ -16,4 +16,6 @@ export const loginClick = async () => {
           },
         },
     })
+
+    supabase.auth.startAutoRefresh();
 }   
