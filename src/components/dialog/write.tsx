@@ -10,6 +10,7 @@ import '../../app/styles/@common/dialog/index.scss'
 import '../../app/styles/@media/dialog/index.scss'
 import { changeWrite, write } from "@/features/store/common/write"
 import { z } from "zod"
+import { writeClick } from "@/features/service/write"
 
 type Props = {
     popup: boolean
@@ -86,9 +87,7 @@ export function WriteDialog({ popup }: Props) {
                     onChange={handleChange} />
             </div>
 
-            <button className="writeBtn" onClick={() => {
-                write.parse(data.writeData);
-            }}>
+            <button className="writeBtn" onClick={() => writeClick(data.writeData)}>
                 현재의 일상을 개선하기 위해 등록하기
             </button>
         </Dialog>
