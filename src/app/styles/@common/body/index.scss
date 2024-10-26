@@ -1,0 +1,23 @@
+.body {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    flex: 1;
+    margin-top: 24px;
+    margin-left: 230px;
+}
+
+.content p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.content .first {
+    margin-top: 40px;
+}
+
+.content .second {
+    margin-top: 40px;
+}

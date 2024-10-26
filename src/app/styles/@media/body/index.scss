@@ -1,0 +1,22 @@
+/** 헤더창 @media */
+@media (max-width: 834px) {
+    .body {
+        width: 100%;
+        flex-direction: column;
+        transform: translate(-78px, 0px);
+    }
+
+    .content {
+        display: block;
+        margin: 16px auto;
+    }
+
+    .content div {
+        justify-content: flex-start;
+    }
+
+    .content div p {
+        font-size: 16px;
+        justify-content: flex-start;
+    }
+}
