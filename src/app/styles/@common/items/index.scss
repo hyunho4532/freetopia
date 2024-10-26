@@ -6,11 +6,24 @@
     width: 210px;
     height: 180px;
     margin-top: 16px;
-    background-color: aliceblue;
+    margin-left: 12px;
+    background-color: floralwhite;
 }
 
-.items .card p {
-    font-size: 14px;
-    padding-left: 8px;
+.items .card .job {
+    font-size: 18px;
     padding-top: 8px;
+    padding-left: 8px;
+}
+
+.items .card .work {
+    font-size: 14px;
+    padding-top: 24px;
+    padding-left: 8px;
+}
+
+.items .card .license {
+    font-size: 14px;
+    padding-top: 8px;
+    padding-left: 8px;
 }

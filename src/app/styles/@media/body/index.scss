@@ -6,17 +6,21 @@
         transform: translate(-78px, 0px);
     }
 
-    .content {
+    .body .content {
         display: block;
         margin: 16px auto;
     }
 
-    .content div {
+    .body .content .second {
+        display: block;
         justify-content: flex-start;
+    }
+
+    .content div {
+        margin-left: 100px;
     }
 
     .content div p {
         font-size: 16px;
-        justify-content: flex-start;
     }
 }

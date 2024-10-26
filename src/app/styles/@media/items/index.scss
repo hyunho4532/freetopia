@@ -1,0 +1,36 @@
+/** 로그인 다이얼로그 스타일링 **/
+@media (max-width: 834px) {
+    .items {
+        width: 340px;
+        display: flex;
+        overflow-x: auto;
+        transform: translate(-34.5%, 0%);
+    }
+    
+    .items .card {
+        width: 130px;
+        height: 160px;
+        margin-top: 16px;
+        margin-left: 12px;
+        background-color: floralwhite;
+        flex-shrink: 0;
+    }
+    
+    .items .card .job {
+        font-size: 14px;
+        padding-top: 8px;
+        padding-left: 8px;
+    }
+    
+    .items .card .work {
+        font-size: 10px;
+        padding-top: 24px;
+        padding-left: 8px;
+    }
+    
+    .items .card .license {
+        font-size: 10px;
+        padding-top: 8px;
+        padding-left: 8px;
+    }
+}
