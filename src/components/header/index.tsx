@@ -5,6 +5,7 @@ import { LoginPopup } from '@/features/service/dialog';
 import { useDialogState } from '@/features/store/state';
 import { useUserState } from '@/features/store/user';
 import { useGetUser } from '@/features/service/common';
+import { writeClick } from '@/features/service/write';
 
 type Props = {
     userData: {
@@ -26,7 +27,7 @@ export function Header({ userData }: Props) {
                 </div>
                 <div className="gnb">
                     { userData.id != '' ? <p>사용자</p> : <p onClick={() => LoginPopup(loginState)}>로그인</p> }
-                    <p>작성함</p>
+                    <p onClick={() => writeClick()}>작성함</p>
                     <p>분석함</p>
                 </div>
                 <div className="profile">
