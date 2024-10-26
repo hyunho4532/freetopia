@@ -32,20 +32,20 @@ export function WriteDialog({ popup }: Props) {
             </div>
 
             <div className="inputform">
-                <p>1. 현재 직업이 어떻게 되신가요...?</p>
+                <p>1. 현재 직업이 어떻게 되신가요...? ＊</p>
                 <select>
                     <option>아르바이트</option>
                     <option>직장인</option>
                     <option>취준생</option>
                 </select>
 
-                <p>2. 미래를 위해 현재 하고 있는 일이 있나요..?</p>
+                <p>2. 미래를 위해 현재 하고 있는 일이 있나요..? ＊</p>
                 <input type="text" placeholder="ex) 하루동안 꾸준히 운동하기" />
 
                 <p>3. 특정 자격증을 보유하고 계신가요..?</p>
                 <input type="text" placeholder="ex) 한식조리기능사" />
 
-                <p>4. 선호하는 일자리 유형은 어떻게 되시나요..?</p>
+                <p>4. 선호하는 일자리 유형은 어떻게 되시나요..? ＊</p>
                 <select>
                     <option>단기</option>
                     <option>장기</option>
