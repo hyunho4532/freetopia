@@ -13,17 +13,17 @@ import { AnalyzeItems } from 'components@/items/analyzeItem';
 
 export function Body() {
 
-    const { isMobile, setIsMobile, writeData, setWriteData, analyzeData, setAnalyzeData } = useFetchBody();
+    const { isMobile, setIsMobile, _data, _setData } = useFetchBody();
 
     useEffect(() => {
         useSelectWrite()
             .then(response => {
-                setWriteData(response!);
+                _setData({ writeData: response! });
             })
 
         useSelectAnalyze()
             .then(response => {
-                setAnalyzeData(response!);
+                _setData({ analyzeData: response! });
             })
 
         useFetchResize(setIsMobile);
@@ -49,12 +49,12 @@ export function Body() {
 
                 <div className="second">
                     <p>현재의 일상을 개선하기 - 사용자 수집</p>
-                    <WriteItems writeData={writeData} />
+                    <WriteItems data={_data.writeData} />
                 </div>
 
                 <div className='third'>
                     <p>사용자들의 하루 일과들을 분석했어요!</p>
-                    <AnalyzeItems analyzeData={analyzeData} />
+                    <AnalyzeItems data={_data.analyzeData} />
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import { z } from "zod";
 
 /** 작성함 데이터 
@@ -39,12 +39,15 @@ export const useFetchChangeAnalyze = () => {
  * (isMobile: 현재 웹이 모바일인지 아닌지 판단, writeData: 작성함에 작성한 데이터들을 조회)
  */
 export const useFetchBody = () => {
+    const [_data, _setData] = useReducer((prev: any, next: any) => {
+        return { ...prev, ...next }
+    }, {
+        writeData: [], analyzeData: []
+    })
     const [isMobile, setIsMobile] = useState(false);
-    const [writeData, setWriteData] = useState<any[]>([]);
-    const [analyzeData, setAnalyzeData] = useState<any[]>([]);
 
     return ({
-        isMobile, setIsMobile, writeData, setWriteData, analyzeData, setAnalyzeData
+        isMobile, setIsMobile, _data, _setData
     })
 }
 

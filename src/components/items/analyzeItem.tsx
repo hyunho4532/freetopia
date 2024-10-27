@@ -2,15 +2,18 @@ import '../../app/styles/@common/items/index.scss'
 import '../../app/styles/@media/items/index.scss'
 
 type Props = {
-    analyzeData: any
+    data: any
 }
 
-export function AnalyzeItems({ analyzeData }: Props) {
+export function AnalyzeItems({ data }: Props) {
     return (
         <div className='items'>
-            { analyzeData.map((data: any) => (
+            { data.map((data: any) => (
                 <div className='card'>
-                    <p>{data.status}</p>
+                    <p className='status'>상태: {data.status}</p>
+                    <p className='todayactivity'>오늘 활동: {data.todayactivity}</p>
+                    <p className='todaywork'>🥇: {data.todaywork}</p>
+                    <p className='tomowork'>내일 해야 할 일은? {data.tomowork}</p>
                 </div>
             ))}
         </div>

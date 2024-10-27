@@ -2,13 +2,13 @@ import '../../app/styles/@common/items/index.scss'
 import '../../app/styles/@media/items/index.scss'
 
 type Props = {
-    writeData: any[]
+    data: any
 }
 
-export function WriteItems({ writeData }: Props) {
+export function WriteItems({ data }: Props) {
     return (
         <div className='items'>
-            { writeData.map((data: any) => (
+            { data.map((data: any) => (
                 <div className='card'>
                     <p className='job'>📚: {data.job}</p>
                     <p className='work'>🥇: {data.work}</p>
