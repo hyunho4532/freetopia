@@ -1,4 +1,5 @@
 /** 
+ * 작성과 관련된 모달 창은 여기에 작성한다.
  * 로그인 모달 창 UI
  * 1. OAUth 로그인: 카카오 로그인, 구글 로그인
  * 2. 로그인 진행 후 간단한 정보 입력
@@ -6,22 +7,24 @@
 
 import { useDialogState } from "@/features/store/state"
 import { Dialog } from "@mui/material"
-import '../../app/styles/@common/dialog/index.scss'
-import '../../app/styles/@media/dialog/index.scss'
-import { changeWrite, write } from "@/features/store/common/write"
-import { z } from "zod"
+import 'styles@/@common/dialog/index.scss'
+import 'styles@/@media/dialog/index.scss'
+import { useFetchChangeWrite } from "@/features/store/common/write"
 import { writeClick } from "@/features/service/write"
 
-type Props = {
+type writeProps = {
     popup: boolean
 }
 
-export function WriteDialog({ popup }: Props) {
+type analyzeProps = {
+    popup: boolean
+}
 
-    const data = changeWrite();
+export function WriteDialog({ popup }: writeProps) {
+
+    const data = useFetchChangeWrite();
 
     const handleChange = (event: any) => {
-
         const { name, value } = event.target;
 
         data.setWriteData({
@@ -90,6 +93,27 @@ export function WriteDialog({ popup }: Props) {
             <button className="writeBtn" onClick={() => writeClick(data.writeData)}>
                 현재의 일상을 개선하기 위해 등록하기
             </button>
+        </Dialog>
+    )
+}
+
+export function AnalyzeDialog({ popup }: analyzeProps) {
+    return (
+        <Dialog
+            PaperProps={{
+                style: {
+                    width: "460px",
+                    height: "720px"
+                }
+            }}
+            open={popup}
+            onClose={() => {
+                useDialogState.getState().setAnalyze(false);
+            }}>
+
+            <div className="inputbody">
+                <h1 className="title">오늘 하루를 분석하기</h1>
+            </div>
         </Dialog>
     )
 }

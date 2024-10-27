@@ -1,6 +1,6 @@
 import { useSelectWrite } from '@/features/service/select'
-import '../../app/styles/@common/body/index.scss'
-import '../../app/styles/@media/body/index.scss'
+import 'styles@/@common/body/index.scss'
+import 'styles@/@media/body/index.scss'
 import { useEffect, useState } from 'react'
 import { WriteItems } from '../items/writeItem';
 import { TipItems } from '../items/tipItem';
@@ -47,7 +47,7 @@ export function Body() {
                 </div>
 
                 <div className='third'>
-                    <p>사용자들의 하루 일과들을 조회했어요!</p>
+                    <p>사용자들의 하루 일과들을 분석했어요!</p>
                 </div>
             </div>
         </div>

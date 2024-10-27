@@ -4,7 +4,7 @@ import { z } from "zod";
 /** 작성함 데이터 
  * (job: 현재 직업, work: 현재 하고 있는 일, license: 보유하고 있는 자격증, workType: 선호하는 일자리 유형, history: 일한 경험 및 경력 사항) 
  **/
-export const changeWrite = () => {
+export const useFetchChangeWrite = () => {
     const [writeData, setWriteData] = useState({
         job: '',
         work: '',
@@ -18,6 +18,9 @@ export const changeWrite = () => {
     });
 }
 
+/** Body 데이터
+ * (isMobile: 현재 웹이 모바일인지 아닌지 판단, writeData: 작성함에 작성한 데이터들을 조회)
+ */
 export const useFetchBody = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [writeData, setWriteData] = useState<any[]>([]);

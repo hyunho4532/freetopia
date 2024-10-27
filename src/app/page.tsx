@@ -1,7 +1,7 @@
 "use client";
 
-import { Body } from "@/components/body";
-import { Header } from "@/components/header";
+import { Body } from "components@/body";
+import { Header } from "components@/header";
 import { useFetchUser, useGetUser } from "@/features/service/common";
 import { useDialogState } from "@/features/store/state";
 import { SetUpDialog } from "@/shared/ui-kit/dialog";

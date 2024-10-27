@@ -12,3 +12,8 @@ export function LoginPopup(loginState: any) {
 export function WritePopup(writeState: any) {
     useDialogState.getState().setWrite(!writeState);
 }
+
+// 헤더에 분석함을 클릭했을 때
+export function AnalyzePopup(analyzeState: any) {
+    useDialogState.getState().setAnalyze(!analyzeState);
+}
