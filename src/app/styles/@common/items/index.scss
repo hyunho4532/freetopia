@@ -1,6 +1,12 @@
 .items {
+    width: 1360px;
+    height: 230px;
     display: flex;
+    flex-direction: row; /* 가로 방향 고정 */
+    overflow-x: scroll; /* 가로 스크롤만 활성화 */
+    white-space: nowrap; /* 줄바꿈 방지 */
 }
+
 
 .items .card {
     width: 210px;
@@ -8,6 +14,7 @@
     margin-top: 16px;
     margin-left: 12px;
     background-color: floralwhite;
+    flex-shrink: 0;
 }
 
 .items .card .job {
@@ -17,9 +24,22 @@
 }
 
 .items .card .title {
-    font-size: 14px;
-    padding-top: 8px;
+    font-size: 12px;
+    padding-top: 16px;
     text-align: center;
+}
+
+.items .card .img {
+    width: 180px;
+    height: 90px;
+    margin: 16px;
+}
+
+.items .card .link {
+    font-size: 14px;
+    margin-top: 16px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .items .card .work {

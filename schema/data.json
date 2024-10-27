@@ -2,13 +2,73 @@
     "tip": [
         {
             "key": 1,
-            "title": "프리터족의 2024년 알바 후기",
+            "title": "프리터족 2024년 알바 후기",
             "url": "https://blog.naver.com/njm_22/223577168983?trackingCode=rss"
         },
         {
             "key": 2,
             "title": "한국에서 프리터족으로 사는 법",
             "url": "https://brunch.co.kr/brunchbook/free-arbeiter"
+        },
+        {
+            "key": 3,
+            "title": "전문가가 본 '프리터족'이란?",
+            "image": "https://cdn.cctoday.co.kr/news/photo/202409/2201378_644435_1134.jpg",
+            "url": "https://www.cctoday.co.kr/news/articleView.html?idxno=2201378"
+        },
+        {
+            "key": 4,
+            "title": "알바로 살아가기",
+            "url": "https://www.psychiatricnews.net/news/articleView.html?idxno=35274"
+        },
+        {
+            "key": 5,
+            "title": "일본에서 프리터로 살아가는 법",
+            "image": "https://cdn.womaneconomy.co.kr/news/photo/202307/218095_425589_560.png",
+            "url": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=218095"
+        },
+        {
+            "key": 6,
+            "title": "프리터족은 한심한가?",
+            "url": "https://brunch.co.kr/@daisy57/17"
+        },
+        {
+            "key": 7,
+            "title": "프리터족 채지연씨의 삶",
+            "image": "http://newsimg.hankookilbo.com/2019/02/12/201902121421027220_1.jpg",
+            "url": "https://www.hankookilbo.com/News/Read/201902121421027220"
+        },
+        {
+            "key": 8,
+            "title": "현대인 31.8% 나는 '프리터 족' 이다!",
+            "image": "https://img.jobkorea.co.kr/images/ContentsManagement/SmartEditor/2016/6/2016615105322_SEU.jpg",
+            "url": "https://www.hankookilbo.com/News/Read/201902121421027220"
+        }
+    ],
+    "swiper": [
+        {
+            "key": 1,
+            "title": "꿀팁1!"
+        },        
+        {
+            "key": 2,
+            "title": "꿀팁2!"
+        },
+        {
+            "key": 3,
+            "title": "꿀팁3!"
+        },
+        {
+            "key": 4,
+            "title": "꿀팁4!"
+        },
+        {
+            "key": 5,
+            "title": "꿀팁5!"
+        },
+        {
+            "key": 6,
+            "title": "꿀팁6!"
         }
     ]
 }
