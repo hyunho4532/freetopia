@@ -145,7 +145,7 @@ export function AnalyzeDialog({ popup }: analyzeProps) {
                     placeholder="ex) 보람찬 일들을 하여 재미있는 하루가 되었습니다" />
             </div>
 
-            <button className="writeBtn">
+            <button className="analyzeBtn">
                 오늘의 하루를 정리하며 마무리..
             </button>
         </Dialog>
