@@ -6,6 +6,8 @@ import { WriteDialog } from "@/components/dialog/write";
 import { Header } from "@/components/header";
 import { useFetchUser, useGetUser } from "@/features/service/common";
 import { useDialogState } from "@/features/store/state";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export default function Home() {
   const dialogState = useDialogState((state: any) => state);

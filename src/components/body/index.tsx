@@ -3,14 +3,11 @@ import '../../app/styles/@common/body/index.scss'
 import '../../app/styles/@media/body/index.scss'
 import { useEffect, useState } from 'react'
 import { WriteItems } from '../items/writeItem';
-import tipData from '../../../schema/data.json';
 import { TipItems } from '../items/tipItem';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import swiperData from '../../../schema/data.json';
-import { Navigation, Pagination } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/pagination';
+import data from '../../../schema/data.json';
+import { FritterItems } from '../items/FritterItem';
+import { useFetchResize } from '@/shared/ui-kit/resize';
+import { SwiperItems } from '../swiper/SwiperItem';
 
 export function Body() {
 
@@ -23,14 +20,7 @@ export function Body() {
                 setWriteData(response!);
             })
 
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 834);
-        };
-        
-        handleResize();
-        window.addEventListener('resize', handleResize);
-
-        return () => window.removeEventListener('resize', handleResize);
+        useFetchResize(setIsMobile);
     }, []);
 
     return (
@@ -40,25 +30,15 @@ export function Body() {
                     { isMoblie ? 
                         <div className='mobile'>
                             <p>프리터족이란?</p>
-                        </div> : 
-                        <Swiper
-                            navigation
-                            pagination={true}
-                            modules={[Navigation, Pagination]}>
-                            <div className="swiper">
-                                { swiperData.swiper.map((data: any) => (
-                                    <SwiperSlide className="slide">
-                                        <img onClick={() => window.open(data.url, '_blank')} src={data.title} />
-                                    </SwiperSlide>
-                                ))}
-                            </div>
-                        </Swiper>
+                            <FritterItems fritterData={data.swiper} />
+                        </div> :
+                        <SwiperItems data={data.swiper} />
                     }
                 </div>
 
                 <div className="first">
                     <p>관련 정보 수집</p>
-                    <TipItems tipData={tipData} />
+                    <TipItems tipData={data.tip} />
                 </div>
 
                 <div className="second">
