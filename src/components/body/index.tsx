@@ -13,7 +13,7 @@ import { AnalyzeItems } from 'components@/items/analyzeItem';
 
 export function Body() {
 
-    const { isMobile, setIsMobile, _data, _setData } = useFetchBody();
+    const {  _data, _setData } = useFetchBody();
 
     useEffect(() => {
         useSelectWrite()
@@ -26,14 +26,14 @@ export function Body() {
                 _setData({ analyzeData: response! });
             })
 
-        useFetchResize(setIsMobile);
+        useFetchResize(_setData);
     }, []);
 
     return (
         <div className="body">
             <div className="content">
                 <div className="pagination">
-                    { isMobile ? 
+                    { _data.isMobile ? 
                         <div className='mobile'>
                             <p>프리터족이란?</p>
                             <FritterItems fritterData={data.swiper} />
