@@ -7,6 +7,13 @@
     white-space: nowrap; /* 줄바꿈 방지 */
 }
 
+.items::-webkit-scrollbar {
+    height: 12px;
+}
+
+.items::-webkit-scrollbar-thumb {
+    background-color: blanchedalmond;
+}
 
 .items .card {
     width: 210px;

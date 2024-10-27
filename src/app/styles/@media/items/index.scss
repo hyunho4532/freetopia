@@ -7,6 +7,14 @@
         overflow-x: auto;
         transform: translate(-34.5%, 0%);
     }
+
+    .items::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .items::-webkit-scrollbar-thumb {
+        background-color: blanchedalmond;
+    }
     
     .items .card {
         width: 130px;

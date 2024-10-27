@@ -48,27 +48,18 @@
     "swiper": [
         {
             "key": 1,
-            "title": "꿀팁1!"
+            "title": "https://image.edaily.co.kr/images/Photo/files/NP/S/2019/04/PS19040300171.jpg",
+            "url": "https://m.edaily.co.kr/News/Read?newsId=01541606622452512&mediaCodeNo=257"
         },        
         {
             "key": 2,
-            "title": "꿀팁2!"
+            "title": "https://img6.yna.co.kr/etc/inner/KR/2017/08/23/AKR20170823024100003_01_i_P4.jpg",
+            "url": "https://www.yna.co.kr/view/AKR20170823024100003"
         },
         {
             "key": 3,
-            "title": "꿀팁3!"
-        },
-        {
-            "key": 4,
-            "title": "꿀팁4!"
-        },
-        {
-            "key": 5,
-            "title": "꿀팁5!"
-        },
-        {
-            "key": 6,
-            "title": "꿀팁6!"
+            "title": "https://img1.newsis.com/2023/10/19/NISI20231019_0001389636_web.jpg",
+            "url": "https://www.newsis.com/view/NISX20231019_0002488343"
         }
     ]
 }
