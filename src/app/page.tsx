@@ -6,6 +6,7 @@ import { WriteDialog } from "@/components/dialog/write";
 import { Header } from "@/components/header";
 import { useFetchUser, useGetUser } from "@/features/service/common";
 import { useDialogState } from "@/features/store/state";
+import { SetUpDialog } from "@/shared/ui-kit/dialog";
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -22,8 +23,7 @@ export default function Home() {
     <div>
       <Header userData={userData} />
       <Body />
-      { dialogState.login && <LoginDialog popup={dialogState.login} /> }
-      { dialogState.write && <WriteDialog popup={dialogState.write} /> }
+      <SetUpDialog login={dialogState.login} write={dialogState.write} />
     </div>
   );
 }

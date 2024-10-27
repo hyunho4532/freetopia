@@ -7,7 +7,7 @@ import { TipItems } from '../items/tipItem';
 import data from '../../../schema/data.json';
 import { FritterItems } from '../items/FritterItem';
 import { useFetchResize } from '@/shared/ui-kit/resize';
-import { SwiperItems } from '../swiper/SwiperItem';
+import { SwiperItems } from '../swiper/swiperItem';
 
 export function Body() {
 
