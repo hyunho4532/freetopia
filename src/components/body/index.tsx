@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react'
 import { WriteItems } from '../items/writeItem';
 import { TipItems } from '../items/tipItem';
 import data from '../../../schema/data.json';
-import { FritterItems } from '../items/FritterItem';
+import { FritterItems } from '../items/fritterItem';
 import { useFetchResize } from '@/shared/ui-kit/resize';
-import { SwiperItems } from '../swiper/swiperItem';
+import { Swipers } from '../swiper';
 
 export function Body() {
 
@@ -32,7 +32,7 @@ export function Body() {
                             <p>프리터족이란?</p>
                             <FritterItems fritterData={data.swiper} />
                         </div> :
-                        <SwiperItems data={data.swiper} />
+                        <Swipers data={data.swiper} />
                     }
                 </div>
 
@@ -44,6 +44,10 @@ export function Body() {
                 <div className="second">
                     <p>현재의 일상을 개선하기 - 사용자 수집</p>
                     <WriteItems writeData={writeData} />
+                </div>
+
+                <div className='third'>
+                    <p>사용자들의 하루 일과들을 조회했어요!</p>
                 </div>
             </div>
         </div>

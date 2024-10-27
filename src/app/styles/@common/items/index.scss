@@ -2,9 +2,9 @@
     width: 1360px;
     height: 230px;
     display: flex;
-    flex-direction: row; /* 가로 방향 고정 */
-    overflow-x: scroll; /* 가로 스크롤만 활성화 */
-    white-space: nowrap; /* 줄바꿈 방지 */
+    flex-direction: row;
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 
 .items::-webkit-scrollbar {

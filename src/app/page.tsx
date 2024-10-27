@@ -1,8 +1,6 @@
 "use client";
 
 import { Body } from "@/components/body";
-import { LoginDialog } from "@/components/dialog/login";
-import { WriteDialog } from "@/components/dialog/write";
 import { Header } from "@/components/header";
 import { useFetchUser, useGetUser } from "@/features/service/common";
 import { useDialogState } from "@/features/store/state";
@@ -23,7 +21,7 @@ export default function Home() {
     <div>
       <Header userData={userData} />
       <Body />
-      <SetUpDialog login={dialogState.login} write={dialogState.write} />
+      <SetUpDialog dialogState={dialogState} />
     </div>
   );
 }

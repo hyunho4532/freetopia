@@ -1,12 +1,14 @@
 import { LoginDialog } from "@/components/dialog/login"
 import { WriteDialog } from "@/components/dialog/write"
 
+/** dialogState에 따라, 다이얼로그를 조회함 (login: 로그인 다이얼로그 조회, write: 작성함 다이얼로그 조회) */
 type Props = {
-    login: boolean,
-    write: boolean
+    dialogState: any
 }
 
-export function SetUpDialog({ login, write }: Props) {
+export function SetUpDialog({ dialogState }: Props) {
+
+    const { write, login } = dialogState;
 
     const initDialog = () => {
         if (login) {

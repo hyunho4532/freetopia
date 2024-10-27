@@ -5,7 +5,7 @@ type Props = {
     data: any
 }
 
-export function SwiperItems({ data }: Props) {
+export function Swipers({ data }: Props) {
     return (
         <Swiper
             navigation
