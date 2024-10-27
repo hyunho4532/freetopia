@@ -6,6 +6,8 @@ export const useFetchResize = (setIsMobile: Dispatch<SetStateAction<boolean>>) =
         setIsMobile(window.innerWidth <= 834);
     }
 
+    handleResize();
+
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);

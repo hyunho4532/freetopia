@@ -8,11 +8,11 @@ import data from '../../../schema/data.json';
 import { FritterItems } from '../items/fritterItem';
 import { useFetchResize } from '@/shared/ui-kit/resize';
 import { Swipers } from '../swiper';
+import { useFetchBody } from '@/features/store/common/write';
 
 export function Body() {
 
-    const [isMoblie, setIsMobile] = useState<boolean>(false);
-    const [writeData, setWriteData] = useState<any[]>([]);
+    const { isMobile, setIsMobile, writeData, setWriteData } = useFetchBody();
 
     useEffect(() => {
         useSelectWrite()
@@ -27,7 +27,7 @@ export function Body() {
         <div className="body">
             <div className="content">
                 <div className="pagination">
-                    { isMoblie ? 
+                    { isMobile ? 
                         <div className='mobile'>
                             <p>프리터족이란?</p>
                             <FritterItems fritterData={data.swiper} />

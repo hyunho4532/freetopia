@@ -18,6 +18,15 @@ export const changeWrite = () => {
     });
 }
 
+export const useFetchBody = () => {
+    const [isMobile, setIsMobile] = useState(false);
+    const [writeData, setWriteData] = useState<any[]>([]);
+
+    return ({
+        isMobile, setIsMobile, writeData, setWriteData
+    })
+}
+
 /** 작성함과 관련된 유효성 검사 데이터  */
 export const write = z.object({
     job: z.string().refine((job) => job.length > 0, {
