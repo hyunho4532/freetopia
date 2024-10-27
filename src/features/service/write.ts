@@ -5,6 +5,7 @@
 import { z } from "zod";
 import { write } from "../store/common/write";
 import { supabase } from "../../../supabase.config";
+import { toast } from "react-toastify";
 
 // 헤더에 작성함 클릭했을 때
 export const writeClick = async (writeData: any) => {
@@ -24,7 +25,7 @@ export const writeClick = async (writeData: any) => {
     } catch(error) {
         if (error instanceof z.ZodError) {
             error.errors.map(error => {
-                alert(error.message);
+                toast.error(error.message);
             })
         }
     }

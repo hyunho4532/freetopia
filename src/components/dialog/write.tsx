@@ -11,6 +11,7 @@ import 'styles@/@common/dialog/index.scss'
 import 'styles@/@media/dialog/index.scss'
 import { useFetchChangeWrite } from "@/features/store/common/write"
 import { writeClick } from "@/features/service/write"
+import json from '../../../schema/data.json'
 
 type writeProps = {
     popup: boolean
@@ -47,17 +48,15 @@ export function WriteDialog({ popup }: writeProps) {
             }}>
 
             <div className="inputbody">
-                <h1 className="title">현재의 일상을 개선하기</h1>
+                <h1 className="title">현재의 일상 개선하기</h1>
             </div>
 
             <div className="inputform">
                 <p>1. 현재 직업이 어떻게 되신가요...? ＊</p>
                 <select name="job" onChange={handleChange}>
-                    <option value="아르바이트">아르바이트</option>
-                    <option value="학생">직장인</option>
-                    <option value="취준생">취준생</option>
-                    <option value="학생">학생</option>
-                    <option value="기타">기타</option>
+                    { json.job.map((data: any) => (
+                        <option value={data.title}>{data.title}</option>
+                    )) }
                 </select>
 
                 <p>2. 미래를 위해 현재 하고 있는 일이 있나요..? ＊</p>
@@ -76,10 +75,9 @@ export function WriteDialog({ popup }: writeProps) {
 
                 <p>4. 선호하는 일자리 유형은 어떻게 되시나요..? ＊</p>
                 <select name="workType" onChange={handleChange}>
-                    <option value="단기">단기</option>
-                    <option value="장기">장기</option>
-                    <option value="주말 알바">주말 알바</option>
-                    <option value="재택">재택</option>
+                    { json.jobType.map((data: any) => (
+                        <option value={data.title}>{data.title}</option>
+                    ))}
                 </select>
 
                 <p>5. 이전에 일했던 경험 및 경력 사항이 있으신가요..?</p>
@@ -103,7 +101,7 @@ export function AnalyzeDialog({ popup }: analyzeProps) {
             PaperProps={{
                 style: {
                     width: "460px",
-                    height: "720px"
+                    height: "780px"
                 }
             }}
             open={popup}
@@ -112,8 +110,44 @@ export function AnalyzeDialog({ popup }: analyzeProps) {
             }}>
 
             <div className="inputbody">
-                <h1 className="title">오늘 하루를 분석하기</h1>
+                <h1 className="title">오늘 하루 분석하기</h1>
             </div>
+
+            <div className="inputform">
+                <p>1. 오늘 하루는 어떠셨나요? *</p>                
+                <select name="status">
+                    { json.status.map((data: any) => (
+                        <option value={data.title}>{data.title}</option>
+                    ))}
+                </select>
+                
+                <p>2. 오늘 있었던 사건이나 활동을 입력해주세요! *</p>
+                <input 
+                    name="todayactivity"
+                    type="text"
+                    placeholder="ex) 3시에 운동하기" />
+
+                <p>3. 오늘 해야 할 일을 완료하셨나요? *</p>
+                <input
+                    name="todaywork"
+                    type="text" 
+                    placeholder="ex) 자격증 필기 시험 접수하기" />
+
+                <p>4. 내일 계획은 무엇인가요?</p>
+                <input
+                    name="tomowork"
+                    type="text" 
+                    placeholder="ex) 토익 공부" />
+
+                <p>5. 느낀 점을 입력해주세요!</p>
+                <textarea
+                    name="takeaway"
+                    placeholder="ex) 보람찬 일들을 하여 재미있는 하루가 되었습니다" />
+            </div>
+
+            <button className="writeBtn">
+                오늘의 하루를 정리하며 마무리..
+            </button>
         </Dialog>
     )
 }

@@ -6,7 +6,9 @@ import { useFetchUser, useGetUser } from "@/features/service/common";
 import { useDialogState } from "@/features/store/state";
 import { SetUpDialog } from "@/shared/ui-kit/dialog";
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css/pagination'; 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   const dialogState = useDialogState((state: any) => state);
@@ -19,6 +21,7 @@ export default function Home() {
 
   return (
     <div>
+      <ToastContainer />
       <Header userData={userData} />
       <Body />
       <SetUpDialog dialogState={dialogState} />
