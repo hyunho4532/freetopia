@@ -1,4 +1,4 @@
-import { useSelectWrite } from '@/features/service/select'
+import { useSelectAnalyze, useSelectWrite } from '@/features/service/select'
 import 'styles@/@common/body/index.scss'
 import 'styles@/@media/body/index.scss'
 import { useEffect, useState } from 'react'
@@ -9,15 +9,21 @@ import { FritterItems } from '../items/fritterItem';
 import { useFetchResize } from '@/shared/ui-kit/resize';
 import { Swipers } from '../swiper';
 import { useFetchBody } from '@/features/store/common/write';
+import { AnalyzeItems } from 'components@/items/analyzeItem';
 
 export function Body() {
 
-    const { isMobile, setIsMobile, writeData, setWriteData } = useFetchBody();
+    const { isMobile, setIsMobile, writeData, setWriteData, analyzeData, setAnalyzeData } = useFetchBody();
 
     useEffect(() => {
         useSelectWrite()
             .then(response => {
                 setWriteData(response!);
+            })
+
+        useSelectAnalyze()
+            .then(response => {
+                setAnalyzeData(response!);
             })
 
         useFetchResize(setIsMobile);
@@ -48,6 +54,7 @@ export function Body() {
 
                 <div className='third'>
                     <p>사용자들의 하루 일과들을 분석했어요!</p>
+                    <AnalyzeItems analyzeData={analyzeData} />
                 </div>
             </div>
         </div>

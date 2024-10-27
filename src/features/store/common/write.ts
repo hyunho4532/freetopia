@@ -41,9 +41,10 @@ export const useFetchChangeAnalyze = () => {
 export const useFetchBody = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [writeData, setWriteData] = useState<any[]>([]);
+    const [analyzeData, setAnalyzeData] = useState<any[]>([]);
 
     return ({
-        isMobile, setIsMobile, writeData, setWriteData
+        isMobile, setIsMobile, writeData, setWriteData, analyzeData, setAnalyzeData
     })
 }
 
