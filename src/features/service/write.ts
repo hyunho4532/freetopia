@@ -22,11 +22,20 @@ export const writeClick = async (writeData: any) => {
             }); 
         }
 
-    } catch(error) {
+    } catch (error) {
         if (error instanceof z.ZodError) {
             error.errors.map(error => {
                 toast.error(error.message);
             })
         }
+    }
+}
+
+// 헤더에 분석함 클릭했을 때
+export const analyzeClick = async (analyzeData: any) => {
+    try {
+        alert(analyzeData);
+    } catch (error) {
+
     }
 }

@@ -9,8 +9,8 @@ import { useDialogState } from "@/features/store/state"
 import { Dialog } from "@mui/material"
 import 'styles@/@common/dialog/index.scss'
 import 'styles@/@media/dialog/index.scss'
-import { useFetchChangeWrite } from "@/features/store/common/write"
-import { writeClick } from "@/features/service/write"
+import { useFetchChangeAnalyze, useFetchChangeWrite } from "@/features/store/common/write"
+import { analyzeClick, writeClick } from "@/features/service/write"
 import json from '../../../schema/data.json'
 
 type writeProps = {
@@ -96,6 +96,19 @@ export function WriteDialog({ popup }: writeProps) {
 }
 
 export function AnalyzeDialog({ popup }: analyzeProps) {
+
+    const data = useFetchChangeAnalyze();
+
+    const handleChange = (event: any) => {
+        const { name, value } = event.target;
+
+        data.setAnalyzeData({
+            ...data.analyzeData,
+            [name]: value
+        });
+    }
+
+
     return (
         <Dialog
             PaperProps={{
@@ -115,7 +128,7 @@ export function AnalyzeDialog({ popup }: analyzeProps) {
 
             <div className="inputform">
                 <p>1. 오늘 하루는 어떠셨나요? *</p>                
-                <select name="status">
+                <select name="status" onChange={handleChange}>
                     { json.status.map((data: any) => (
                         <option value={data.title}>{data.title}</option>
                     ))}
@@ -125,27 +138,31 @@ export function AnalyzeDialog({ popup }: analyzeProps) {
                 <input 
                     name="todayactivity"
                     type="text"
-                    placeholder="ex) 3시에 운동하기" />
+                    placeholder="ex) 3시에 운동하기"
+                    onChange={handleChange} />
 
                 <p>3. 오늘 해야 할 일을 완료하셨나요? *</p>
                 <input
                     name="todaywork"
                     type="text" 
-                    placeholder="ex) 자격증 필기 시험 접수하기" />
+                    placeholder="ex) 자격증 필기 시험 접수하기"
+                    onChange={handleChange} />
 
                 <p>4. 내일 계획은 무엇인가요?</p>
                 <input
                     name="tomowork"
                     type="text" 
-                    placeholder="ex) 토익 공부" />
+                    placeholder="ex) 토익 공부"
+                    onChange={handleChange} />
 
                 <p>5. 느낀 점을 입력해주세요!</p>
                 <textarea
                     name="takeaway"
-                    placeholder="ex) 보람찬 일들을 하여 재미있는 하루가 되었습니다" />
+                    placeholder="ex) 보람찬 일들을 하여 재미있는 하루가 되었습니다"
+                    onChange={handleChange} />
             </div>
 
-            <button className="analyzeBtn">
+            <button className="analyzeBtn" onClick={() => analyzeClick(data.analyzeData)}>
                 오늘의 하루를 정리하며 마무리..
             </button>
         </Dialog>
