@@ -61,15 +61,35 @@
     border: 1px solid gray;
     font-size: 14px;
     margin-top: 16px;
-    margin-left: 22px;
+    margin-left: 26px;
+    padding-left: 8px;
+}
+
+.inputform textarea {
+    width: 360px;
+    height: 70px;
+    border: 1px solid gray;
+    font-size: 14px;
+    margin-top: 16px;
+    margin-left: 26px;
+    padding-top: 8px;
     padding-left: 8px;
 }
 
 .writeBtn {
-    width: 420px;
+    width: 410px;
     height: 40px;
     background-color: cornflowerblue;
     color: white;
     font-weight: bold;
-    margin: 32px auto;
+    margin: 16px auto;
+}
+
+.analyzeBtn {
+    width: 410px;
+    height: 40px;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: bold;
+    margin: 16px auto;
 }

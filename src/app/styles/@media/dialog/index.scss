@@ -19,10 +19,14 @@
     }
 }
 
-/** 작성 다이얼로그 스타일링 **/
+/** 작성함, 분석함 다이얼로그 스타일링 **/
 @media (max-width: 834px) {
     .inputbody .title {
         font-size: 16px;
+    }
+
+    .inputbody .subtitle {
+        font-size: 14px;
     }
 
     .inputform p {
@@ -30,11 +34,24 @@
     }
 
     .inputform input {
-        width: 220px;
+        width: 240px;
     }
 
-    .writeBtn {
-        width: 270px;
+    .inputform textarea {
+        width: 240px;
+        height: 80px;
         font-size: 12px;
+    }
+    
+    .writeBtn {
+        font-size: 12px;
+        width: 260px;
+        height: 60px;
+    }
+
+    .analyzeBtn {
+        font-size: 12px;
+        width: 260px;
+        height: 60px;
     }
 }

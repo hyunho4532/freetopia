@@ -5,6 +5,7 @@
 import { z } from "zod";
 import { write } from "../store/common/write";
 import { supabase } from "../../../supabase.config";
+import { toast } from "react-toastify";
 
 // 헤더에 작성함 클릭했을 때
 export const writeClick = async (writeData: any) => {
@@ -21,11 +22,26 @@ export const writeClick = async (writeData: any) => {
             }); 
         }
 
-    } catch(error) {
+    } catch (error) {
         if (error instanceof z.ZodError) {
             error.errors.map(error => {
-                alert(error.message);
+                toast.error(error.message);
             })
         }
+    }
+}
+
+// 헤더에 분석함 클릭했을 때
+export const analyzeClick = async (analyzeData: any) => {
+    try {
+        await supabase.from('analyze').insert({
+            status: analyzeData.status,
+            todayactivity: analyzeData.todayactivity,
+            todaywork: analyzeData.todaywork,
+            tomowork: analyzeData.tomowork,
+            takeaway: analyzeData.takeaway
+        })
+    } catch (error) {
+
     }
 }

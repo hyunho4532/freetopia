@@ -1,11 +1,14 @@
 "use client";
 
-import { Body } from "@/components/body";
-import { LoginDialog } from "@/components/dialog/login";
-import { WriteDialog } from "@/components/dialog/write";
-import { Header } from "@/components/header";
+import { Body } from "components@/body";
+import { Header } from "components@/header";
 import { useFetchUser, useGetUser } from "@/features/service/common";
 import { useDialogState } from "@/features/store/state";
+import { SetUpDialog } from "@/shared/ui-kit/dialog";
+import 'swiper/css';
+import 'swiper/css/pagination'; 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   const dialogState = useDialogState((state: any) => state);
@@ -18,10 +21,10 @@ export default function Home() {
 
   return (
     <div>
+      <ToastContainer />
       <Header userData={userData} />
       <Body />
-      { dialogState.login && <LoginDialog popup={dialogState.login} /> }
-      { dialogState.write && <WriteDialog popup={dialogState.write} /> }
+      <SetUpDialog dialogState={dialogState} />
     </div>
   );
 }
