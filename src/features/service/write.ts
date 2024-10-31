@@ -3,7 +3,7 @@
  */
 
 import { z } from "zod";
-import { write } from "../store/common/write";
+import { analyze, write } from "../store/common/write";
 import { supabase } from "../../../supabase.config";
 import { toast } from "react-toastify";
 
@@ -34,14 +34,23 @@ export const writeClick = async (writeData: any) => {
 // 헤더에 분석함 클릭했을 때
 export const analyzeClick = async (analyzeData: any) => {
     try {
-        await supabase.from('analyze').insert({
-            status: analyzeData.status,
-            todayactivity: analyzeData.todayactivity,
-            todaywork: analyzeData.todaywork,
-            tomowork: analyzeData.tomowork,
-            takeaway: analyzeData.takeaway
-        })
-    } catch (error) {
+        const validate = analyze.parse(analyzeData);
 
+        if (validate) {
+            await supabase.from('analyze').insert({
+                status: analyzeData.status,
+                todayactivity: analyzeData.todayactivity,
+                todaywork: analyzeData.todaywork,
+                tomowork: analyzeData.tomowork,
+                takeaway: analyzeData.takeaway
+            })
+        }
+
+    } catch (error) {
+        if (error instanceof z.ZodError) {
+            error.errors.map(error => {
+                toast.error(error.message);
+            })
+        }
     }
 }
