@@ -1,0 +1,82 @@
+@media (max-width: 834px) {
+    .items {
+        width: 340px;
+        height: 190px;
+        display: flex;
+        overflow-x: auto;
+        transform: translate(-34.5%, 0%);
+    }
+
+    .items::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .items::-webkit-scrollbar-thumb {
+        background-color: blanchedalmond;
+    }
+    
+    .items .card {
+        width: 130px;
+        height: 160px;
+        margin-top: 16px;
+        margin-left: 12px;
+        background-color: floralwhite;
+        flex-shrink: 0;
+    }
+    
+    .items .card .job {
+        font-size: 14px;
+        padding-top: 8px;
+        padding-left: 8px;
+        transform: translate(-330%, 0%);
+    }
+
+    .items .card .status {
+        font-size: 14px;
+        padding-top: 8px;
+        transform: translate(-330%, 0%);
+    }
+    
+    .items .card .todayactivity {
+        font-size: 10px;
+        padding-top: 8px;
+        padding-left: 8px;
+    }
+    
+    .items .card .todaywork {
+        font-size: 10px;
+        padding-top: 8px;
+        padding-left: 8px;
+    }
+    
+    .items .card .tomowork {
+        font-size: 10px;
+        padding-top: 40px;
+        padding-left: 8px;
+    }
+
+    .items .card .title {
+        font-size: 10px;
+    }
+
+    .items .card .link {
+        font-size: 12px;
+    }
+
+    .items .card .img {
+        width: 100px;
+        height: 70px;
+    }
+    
+    .items .card .work {
+        font-size: 10px;
+        padding-top: 24px;
+        padding-left: 8px;
+    }
+    
+    .items .card .license {
+        font-size: 10px;
+        padding-top: 8px;
+        padding-left: 8px;
+    }
+}

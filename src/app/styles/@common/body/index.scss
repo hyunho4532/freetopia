@@ -1,0 +1,50 @@
+.body {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 360px;
+    flex: 1;
+    margin-top: 24px;
+    margin-left: 230px;
+}
+
+.body .content .pagination {
+    flex: 1;
+    margin-top: 24px;
+}
+
+.body .content .pagination .swiper {
+    width: 1350px;
+    height: 360px;
+    transform: translate(-9.5%, 0%);
+}
+
+.body .content .pagination .swiper .slide img {
+    width: 1350px;
+    height: 360px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.content p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.content .first {
+    margin-top: 60px;
+}
+
+.content .second {
+    margin-top: 60px;
+}
+
+.content .third {
+    margin-top: 60px;
+}
+
+.content .second .items {
+    display: flex;
+}

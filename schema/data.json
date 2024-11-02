@@ -1,0 +1,127 @@
+{
+    "job": [
+        {
+            "key": 1,
+            "title": "아르바이트"
+        },
+        {
+            "key": 2,
+            "title": "직장인"
+        },
+        {
+            "key": 3,
+            "title": "취준생"
+        },
+        {
+            "key": 4,
+            "title": "학생"
+        },
+        {
+            "key": 5,
+            "title": "기타"
+        }
+    ],
+    "jobType": [
+        {
+            "key": 1,
+            "title": "단기"
+        },
+        {
+            "key": 2,
+            "title": "장기"
+        },
+        {
+            "key": 3,
+            "title": "주말 알바"
+        },
+        {
+            "key": 4,
+            "title": "재택"
+        }
+    ],
+    "status": [
+        {
+            "key": 1,
+            "title": "매우 좋음"
+        },
+        {
+            "key": 2,
+            "title": "좋음"
+        },
+        {
+            "key": 3,
+            "title": "보통"
+        },
+        {
+            "key": 4,
+            "title": "안좋음"
+        },
+        {
+            "key": 5,
+            "title": "매우 안좋음"
+        }
+    ],
+    "tip": [
+        {
+            "key": 1,
+            "title": "프리터족 2024년 알바 후기",
+            "url": "https://blog.naver.com/njm_22/223577168983?trackingCode=rss"
+        },
+        {
+            "key": 2,
+            "title": "한국에서 프리터족으로 사는 법",
+            "url": "https://brunch.co.kr/brunchbook/free-arbeiter"
+        },
+        {
+            "key": 3,
+            "title": "전문가가 본 '프리터족'이란?",
+            "image": "https://cdn.cctoday.co.kr/news/photo/202409/2201378_644435_1134.jpg",
+            "url": "https://www.cctoday.co.kr/news/articleView.html?idxno=2201378"
+        },
+        {
+            "key": 4,
+            "title": "알바로 살아가기",
+            "url": "https://www.psychiatricnews.net/news/articleView.html?idxno=35274"
+        },
+        {
+            "key": 5,
+            "title": "일본에서 프리터로 살아가는 법",
+            "image": "https://cdn.womaneconomy.co.kr/news/photo/202307/218095_425589_560.png",
+            "url": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=218095"
+        },
+        {
+            "key": 6,
+            "title": "프리터족은 한심한가?",
+            "url": "https://brunch.co.kr/@daisy57/17"
+        },
+        {
+            "key": 7,
+            "title": "프리터족 채지연씨의 삶",
+            "image": "http://newsimg.hankookilbo.com/2019/02/12/201902121421027220_1.jpg",
+            "url": "https://www.hankookilbo.com/News/Read/201902121421027220"
+        },
+        {
+            "key": 8,
+            "title": "현대인 31.8% 나는 '프리터 족' 이다!",
+            "image": "https://img.jobkorea.co.kr/images/ContentsManagement/SmartEditor/2016/6/2016615105322_SEU.jpg",
+            "url": "https://www.hankookilbo.com/News/Read/201902121421027220"
+        }
+    ],
+    "swiper": [
+        {
+            "key": 1,
+            "title": "https://image.edaily.co.kr/images/Photo/files/NP/S/2019/04/PS19040300171.jpg",
+            "url": "https://m.edaily.co.kr/News/Read?newsId=01541606622452512&mediaCodeNo=257"
+        },        
+        {
+            "key": 2,
+            "title": "https://img6.yna.co.kr/etc/inner/KR/2017/08/23/AKR20170823024100003_01_i_P4.jpg",
+            "url": "https://www.yna.co.kr/view/AKR20170823024100003"
+        },
+        {
+            "key": 3,
+            "title": "https://img1.newsis.com/2023/10/19/NISI20231019_0001389636_web.jpg",
+            "url": "https://www.newsis.com/view/NISX20231019_0002488343"
+        }
+    ]
+}
