@@ -6,5 +6,6 @@ import { create } from "zustand";
 export const useUserState = create((set: any) => ({
     id: '',
     email: '',
-    name: ''
+    name: '',
+    profileurl: ''
 }))

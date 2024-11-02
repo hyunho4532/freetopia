@@ -1,4 +1,3 @@
-import { useEffect, useMemo } from "react"
 import { supabase } from "../../../supabase.config"
 
 // freetopia 테이블에 있는 데이터들 조회

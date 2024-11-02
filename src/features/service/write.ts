@@ -6,6 +6,7 @@ import { z } from "zod";
 import { write } from "../store/common/write";
 import { supabase } from "../../../supabase.config";
 import { toast } from "react-toastify";
+import { currentDate } from "@/shared/util/date";
 
 // 헤더에 작성함 클릭했을 때
 export const writeClick = async (writeData: any) => {
@@ -39,9 +40,11 @@ export const analyzeClick = async (analyzeData: any) => {
             todayactivity: analyzeData.todayactivity,
             todaywork: analyzeData.todaywork,
             tomowork: analyzeData.tomowork,
-            takeaway: analyzeData.takeaway
+            takeaway: analyzeData.takeaway,
+            name: JSON.parse(localStorage.getItem('user')!).name,
+            profileurl: JSON.parse(localStorage.getItem('user')!).profileurl,
+            currentdate: currentDate()
         })
     } catch (error) {
-
     }
 }

@@ -24,18 +24,18 @@ export function Header({ userData }: Props) {
         
         var loginStatus = userData.id != '' ? "사용자" : "로그인"
 
+        console.log(title);
+
         if (loginStatus) {
             if (loginStatus === "로그인") {
                 LoginPopup(dialogState.login);
-            } else {
-                
+            } 
+            else if (title === "작성함") {
+                WritePopup(dialogState.write);
             }
-        }
-        else if (title === "작성함") {
-            WritePopup(dialogState.write);
-        }
-        else if (title === "분석함") {
-            AnalyzePopup(dialogState.analyze);
+            else if (title === "분석함") {
+                AnalyzePopup(dialogState.analyze);
+            }
         }
     }
 

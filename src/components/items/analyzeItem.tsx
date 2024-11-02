@@ -24,7 +24,9 @@ export function AnalyzeItems({ data }: Props) {
                             status: data.status,
                             activity: data.todayactivity,
                             work: data.todaywork,
-                            tomowork: data.tomowork
+                            tomowork: data.tomowork,
+                            name: data.name,
+                            profileurl: data.profileurl
                         }}}>
                             <p className='status'>상태: {data.status}</p>
                         </Link>

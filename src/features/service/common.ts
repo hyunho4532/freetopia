@@ -13,14 +13,16 @@ export const useFetchUser = () => {
             useUserState.setState({
                 id: data.user.id,
                 email: data.user.email,
-                name: data.user.user_metadata.name
+                name: data.user.user_metadata.name,
+                profileurl: data.user.user_metadata.avatar_url
             });
 
             /** 상태 관리 등록 후, 스토리지에 사용자를 담는다. */
             localStorage.setItem('user', JSON.stringify({
                 id: data.user.id,
                 email: data.user.email,
-                name: data.user.user_metadata.name
+                name: data.user.user_metadata.name,
+                profileurl: data.user.user_metadata.avatar_url
             }));
         }
     }, []);

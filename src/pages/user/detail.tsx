@@ -5,11 +5,19 @@ import 'styles@/@media/pages/index.scss';
 export default function Detail() {
 
     const router = useRouter();
-    const { status, activity, work, tomowork } = router.query;
+    const { status, activity, work, tomowork, name, profileurl } = router.query;
 
     return (
         <div className='body'>
             <div className="content">
+
+                <h3 className='title'>사용자를 조회했어요!</h3>
+
+                <div className='info'>
+                    <img src={profileurl as string} /> 
+                    <p>{name}</p> 
+                </div>
+
                 <div className="first">
                     <p>1. 상태 조회하기</p>
                     <p>{status}</p>
