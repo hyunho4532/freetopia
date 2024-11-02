@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import '../../app/styles/@common/items/index.scss'
 import '../../app/styles/@media/items/index.scss'
-import gsap from 'gsap'
 import { handleMouseOut, handleMouseOver } from '@/shared/ui-kit/hover'
 
 type Props = {
@@ -19,8 +18,8 @@ export function WriteItems({ data }: Props) {
                     <div
                         ref={(el: any) => (jobRefs.current[index] = el!)}
                         className='jobs' 
-                        onMouseOver={() => handleMouseOver(index, jobRefs)}
-                        onMouseOut={() => handleMouseOut(index, jobRefs)}>
+                        onMouseOver={() => handleMouseOver(30, 0, index, jobRefs, 1.2)}
+                        onMouseOut={() => handleMouseOut(0, 0, index, jobRefs, 1)}>
                         <p
                            id='job'
                            className='job'>📚: {data.job}
