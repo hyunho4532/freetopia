@@ -18,8 +18,8 @@ export function WriteItems({ data }: Props) {
                     <div
                         ref={(el: any) => (jobRefs.current[index] = el!)}
                         className='jobs' 
-                        onMouseOver={() => handleMouseOver(30, index, jobRefs, 1.2)}
-                        onMouseOut={() => handleMouseOut(0, index, jobRefs, 1)}>
+                        onMouseOver={() => handleMouseOver(30, 0, index, jobRefs, 1.2)}
+                        onMouseOut={() => handleMouseOut(0, 0, index, jobRefs, 1)}>
                         <p
                            id='job'
                            className='job'>📚: {data.job}

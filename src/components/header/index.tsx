@@ -42,8 +42,8 @@ export function Header({ userData }: Props) {
                     { item.header.map((data: any, index: number) => (
                         <div
                             ref={(el: any) => (headersRef.current[index] = el!)}
-                            onMouseOver={() => handleMouseOver(10, index, headersRef, 1.2)}
-                            onMouseLeave={() => handleMouseOut(0, index, headersRef, 1)}>
+                            onMouseOver={() => handleMouseOver(0, 14, index, headersRef, 1.2)}
+                            onMouseLeave={() => handleMouseOut(0, 0, index, headersRef, 1)}>
                             { data.title === "사용자" ? (
                                 userData.id != '' ? 
                                     <p key={data.key}>{data.title}</p> :

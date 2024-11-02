@@ -17,8 +17,8 @@ export function AnalyzeItems({ data }: Props) {
                 <div className='card'>
                     <div
                         ref={(el: any) => (statusRef.current[index] = el!)}
-                        onMouseOver={() => handleMouseOver(15, index, statusRef, 1.15)}
-                        onMouseLeave={() => handleMouseOut(0, index, statusRef, 1)}>
+                        onMouseOver={() => handleMouseOver(15, 0, index, statusRef, 1.15)}
+                        onMouseLeave={() => handleMouseOut(0, 0, index, statusRef, 1)}>
                         <p className='status'>상태: {data.status}</p>
                     </div>
                     <p className='todayactivity'>오늘 활동: {data.todayactivity}</p>
