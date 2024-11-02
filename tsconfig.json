@@ -18,6 +18,7 @@
       }
     ],
     "paths": {
+      "schema@/*": ["./schema/*"],
       "components@/*": ["./src/components/*"],
       "styles@/*": ["./src/app/styles/*"],
       "@/*": ["./src/*"]
