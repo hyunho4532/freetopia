@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { WriteItems } from '../items/writeItem';
 import { TipItems } from '../items/tipItem';
 import data from '../../../schema/data.json';
-import { FritterItems } from '../items/fritterItem';
+import { FritterItems } from '../items/FritterItem';
 import { useFetchResize } from '@/shared/ui-kit/resize';
 import { Swipers } from '../swiper';
 import { useFetchBody } from '@/features/store/common/write';

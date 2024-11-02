@@ -1,6 +1,6 @@
 import { useRef } from 'react'
-import '../../app/styles/@common/items/index.scss'
-import '../../app/styles/@media/items/index.scss'
+import 'styles@/@common/items/index.scss'
+import 'styles@/@media/items/index.scss'
 import { handleMouseOut, handleMouseOver } from '@/shared/ui-kit/hover'
 import Link from 'next/link'
 
@@ -20,7 +20,11 @@ export function AnalyzeItems({ data }: Props) {
                         ref={(el: any) => (statusRef.current[index] = el!)}
                         onMouseOver={() => handleMouseOver(15, 0, index, statusRef, 1.15)}
                         onMouseLeave={() => handleMouseOut(0, 0, index, statusRef, 1)}>
-                        <Link href="/user/detail">
+                        <Link href={{pathname: '/user/detail', query: {
+                            status: data.status,
+                            activity: data.todayactivity,
+                            work: data.todaywork
+                        }}}>
                             <p className='status'>상태: {data.status}</p>
                         </Link>
                     </div>

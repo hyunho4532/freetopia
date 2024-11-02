@@ -15,7 +15,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const pretendard = localFont({
+const pretendard = localFont({ 
   src: "./fonts/PretendardVariable.woff2",
   display: "swap",
   weight: "45 920",

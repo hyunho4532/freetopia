@@ -1,0 +1,32 @@
+@media (max-width: 834px) {
+    .body {
+        width: 100%;
+        flex-direction: column;
+        transform: translate(-78px, 0px);
+    }
+
+    .body .content {
+        display: block;
+        margin: 16px auto;
+    }
+
+    .body .content .first {
+        margin-top: 16px;
+    }
+
+    .body .content .second {
+        margin-top: 60px;
+    }
+    
+    .body .content .third {
+        margin-top: 60px;
+    }
+
+    .content div {
+        margin-left: 100px;
+    }
+
+    .content div p {
+        font-size: 16px;
+    }
+}
