@@ -5,7 +5,7 @@ import 'styles@/@media/pages/index.scss';
 export default function Detail() {
 
     const router = useRouter();
-    const { status, activity, work } = router.query;
+    const { status, activity, work, tomowork } = router.query;
 
     return (
         <div className='body'>
@@ -23,6 +23,11 @@ export default function Detail() {
                 <div className='third'>
                     <p>3. 오늘 완료한 내역</p>
                     <p>{work}</p>
+                </div>
+
+                <div className='four'>
+                    <p>4. 내일 계획 일정</p>
+                    <p>{tomowork}</p>
                 </div>
             </div>
         </div>

@@ -23,7 +23,8 @@ export function AnalyzeItems({ data }: Props) {
                         <Link href={{pathname: '/user/detail', query: {
                             status: data.status,
                             activity: data.todayactivity,
-                            work: data.todaywork
+                            work: data.todaywork,
+                            tomowork: data.tomowork
                         }}}>
                             <p className='status'>상태: {data.status}</p>
                         </Link>
