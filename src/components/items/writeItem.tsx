@@ -1,16 +1,31 @@
+import { useEffect, useRef } from 'react'
 import '../../app/styles/@common/items/index.scss'
 import '../../app/styles/@media/items/index.scss'
+import gsap from 'gsap'
+import { handleMouseOut, handleMouseOver } from '@/shared/ui-kit/hover'
 
 type Props = {
     data: any
 }
 
 export function WriteItems({ data }: Props) {
+
+    const jobRefs = useRef<HTMLDivElement[]>([]);
+
     return (
         <div className='items'>
-            { data.map((data: any) => (
-                <div className='card'>
-                    <p className='job'>📚: {data.job}</p>
+            { data.map((data: any, index: number) => (
+                <div key={index} className='card'>
+                    <div
+                        ref={(el: any) => (jobRefs.current[index] = el!)}
+                        className='jobs' 
+                        onMouseOver={() => handleMouseOver(index, jobRefs)}
+                        onMouseOut={() => handleMouseOut(index, jobRefs)}>
+                        <p
+                           id='job'
+                           className='job'>📚: {data.job}
+                        </p>
+                    </div>
                     <p className='work'>🥇: {data.work}</p>
                     <p className='license'>📄: {data.license}</p>
                 </div>
