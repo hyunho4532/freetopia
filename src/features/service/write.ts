@@ -3,7 +3,7 @@
  */
 
 import { z } from "zod";
-import { write } from "../store/common/write";
+import { analyze, write } from "../store/common/write";
 import { supabase } from "../../../supabase.config";
 import { toast } from "react-toastify";
 import { currentDate } from "@/shared/util/date";

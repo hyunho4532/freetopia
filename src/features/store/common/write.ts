@@ -58,3 +58,16 @@ export const write = z.object({
         message: "일자리 유형을 선택해주세요!"
     }),
 })
+
+/** 분석함과 관련된 유효성 검사 데이터  */
+export const analyze = z.object({
+    status: z.string().refine((status) => status.length > 0, {
+        message: "오늘의 감정을 선택해주세요!"
+    }),
+    todayactivity: z.string().refine((activity) => activity.length > 0, {
+        message: "오늘 있었던 사건이나 활동을 입력해주세요!"
+    }),
+    todaywork: z.string().refine((work) => work.length > 0, {
+        message: "오늘 해야 할 일을 완료하셨나요?"
+    })
+})
