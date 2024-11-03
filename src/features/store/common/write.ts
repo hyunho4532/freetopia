@@ -17,7 +17,7 @@ export const useFetchChangeWrite = () => {
 }
 
 /** 분석함 데이터 
- * (job: 현재 직업, work: 현재 하고 있는 일, license: 보유하고 있는 자격증, workType: 선호하는 일자리 유형, history: 일한 경험 및 경력 사항) 
+ * (status: 오늘 하루 상태, todayactivity: 오늘 사건, 활동 정리, todaywork: 오늘 해야 할 일을 완료 했는지, tomowork: 내일 계획, takeaway: 느낀 점) 
  **/
 export const useFetchChangeAnalyze = () => {
     const [analyzeData, setAnalyzeData] = useReducer((prev: any, next: any) => {

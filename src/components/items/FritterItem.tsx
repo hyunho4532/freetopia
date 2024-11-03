@@ -5,6 +5,7 @@ type Props = {
     fritterData: any
 }
 
+/** 프리터족 관련 설명 아이템 */
 export function FritterItems({ fritterData }: Props) {
     return (
         <div className='items'>

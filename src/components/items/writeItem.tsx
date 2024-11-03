@@ -7,6 +7,7 @@ type Props = {
     data: any
 }
 
+/** 사용자 수집 아이템 */
 export function WriteItems({ data }: Props) {
 
     const jobRefs = useRef<HTMLDivElement[]>([]);

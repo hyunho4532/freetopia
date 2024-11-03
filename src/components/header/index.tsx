@@ -24,8 +24,6 @@ export function Header({ userData }: Props) {
         
         var loginStatus = userData.id != '' ? "사용자" : "로그인"
 
-        console.log(title);
-
         if (loginStatus) {
             if (loginStatus === "로그인") {
                 LoginPopup(dialogState.login);

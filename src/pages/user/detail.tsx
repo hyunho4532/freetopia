@@ -15,7 +15,7 @@ export default function Detail() {
             .then(response => {
                 _setDetailData(response!);
             })
-    }, [_detailData])
+    }, [_detailData]);
 
     return (
         <>
@@ -31,25 +31,31 @@ export default function Detail() {
                             <h3 className='title'>사용자를 조회했어요!</h3>
 
                             <div className='info'>
+                                <img src={data.profileurl} />
                                 <div className='col'>
-                                    <img src={data.profileurl} />
+                                    <p>{data.name}</p>
+                                    <p>{data.currentdate}</p>
                                 </div>
                             </div>
 
                             <div className="first">
                                 <p>1. 상태 조회하기</p>
+                                <p>{data.status}</p>
                             </div>
 
                             <div className="second">
                                 <p>2. 오늘의 활동 내역</p>
+                                <p>{data.todayactivity}</p>
                             </div>
 
                             <div className='third'>
                                 <p>3. 오늘 완료한 내역</p>
+                                <p>{data.todaywork}</p>
                             </div>
 
                             <div className='four'>
                                 <p>4. 내일 계획 일정</p>
+                                <p>{data.tomowork}</p>
                             </div>
                         </div>
                     ))}

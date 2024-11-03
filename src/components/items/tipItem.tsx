@@ -7,6 +7,7 @@ type Props = {
     tipData: any
 }
 
+/** 프리터족에 관한 관련 정보 수집 아이템 */
 export function TipItems({ tipData }: Props) {
 
     useEffect(() => {

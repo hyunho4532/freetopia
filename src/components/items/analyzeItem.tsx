@@ -8,6 +8,7 @@ type Props = {
     data: any
 }
 
+/** 분석함 아이템 */
 export function AnalyzeItems({ data }: Props) {
 
     const statusRef = useRef<HTMLDivElement[]>([]);
