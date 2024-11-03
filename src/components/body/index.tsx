@@ -1,11 +1,11 @@
 import { useSelectAnalyze, useSelectWrite } from '@/features/service/select'
 import 'styles@/@common/body/index.scss'
 import 'styles@/@media/body/index.scss'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { WriteItems } from '../items/writeItem';
 import { TipItems } from '../items/tipItem';
 import data from '../../../schema/data.json';
-import { FritterItems } from '../items/FritterItem';
+import { FritterItems } from '../items/fritterItem';
 import { useFetchResize } from '@/shared/ui-kit/resize';
 import { Swipers } from '../swiper';
 import { useFetchBody } from '@/features/store/common/write';

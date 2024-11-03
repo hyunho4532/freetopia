@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import '../../app/styles/@common/items/index.scss'
 import '../../app/styles/@media/items/index.scss'
 import { handleMouseOut, handleMouseOver } from '@/shared/ui-kit/hover'
