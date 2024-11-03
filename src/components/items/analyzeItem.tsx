@@ -21,13 +21,7 @@ export function AnalyzeItems({ data }: Props) {
                         onMouseOver={() => handleMouseOver(15, 0, index, statusRef, 1.15)}
                         onMouseLeave={() => handleMouseOut(0, 0, index, statusRef, 1)}>
                         <Link href={{pathname: '/user/detail', query: {
-                            status: data.status,
-                            activity: data.todayactivity,
-                            work: data.todaywork,
-                            tomowork: data.tomowork,
-                            name: data.name,
-                            profileurl: data.profileurl,
-                            currentdate: data.currentdate
+                            id: data.id
                         }}} shallow={false}>
                             <p className='status'>상태: {data.status}</p>
                         </Link>
