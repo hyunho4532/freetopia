@@ -55,8 +55,8 @@ export default function Coll() {
                             </div>
 
                             <div className='four'>
-                                <p>4. 내일 계획 일정</p>
-                                <p>{data.tomowork}</p>
+                                <p>4. 일했던 경험이나 경력 사항</p>
+                                <p>{data.history}</p>
                             </div>
                         </div>
                     ))}
