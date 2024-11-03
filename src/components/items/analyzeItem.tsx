@@ -29,7 +29,10 @@ export function AnalyzeItems({ data }: Props) {
                     </div>
                     <p className='todayactivity'>오늘 활동: {`${data.todayactivity.substring(0, 6)}...`}</p>
                     <p className='todaywork'>🥇: {`${data.todaywork.substring(0, 12)}...`}</p>
-                    <p className='tomowork'>내일 해야 할 일은? {`${data.tomowork.substring(0, 4)}...`}</p>
+                    <div className='col'>
+                        <img src={data.profileurl} />
+                        <p>{data.name}</p>
+                    </div>
                 </div>
             ))}
         </div>

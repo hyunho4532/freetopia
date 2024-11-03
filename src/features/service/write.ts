@@ -19,7 +19,10 @@ export const writeClick = async (writeData: any) => {
                 work: writeData.work,
                 license: writeData.license,
                 worktype: writeData.workType,
-                history: writeData.history
+                history: writeData.history,
+                name: JSON.parse(localStorage.getItem('user')!).name,
+                profileurl: JSON.parse(localStorage.getItem('user')!).profileurl,
+                currentdate: currentDate()
             }); 
         }
 

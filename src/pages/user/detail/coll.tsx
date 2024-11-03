@@ -45,13 +45,13 @@ export default function Coll() {
                             </div>
 
                             <div className="second">
-                                <p>2. 오늘의 활동 내역</p>
-                                <p>{data.todayactivity}</p>
+                                <p>2. 오늘의 할 일은?</p>
+                                <p>{data.work}</p>
                             </div>
 
                             <div className='third'>
-                                <p>3. 오늘 완료한 내역</p>
-                                <p>{data.todaywork}</p>
+                                <p>3. 현재 보유한 자격증</p>
+                                <p>{data.license}</p>
                             </div>
 
                             <div className='four'>

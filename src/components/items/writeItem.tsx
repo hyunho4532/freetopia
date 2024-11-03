@@ -34,6 +34,10 @@ export function WriteItems({ data }: Props) {
                     </div>
                     <p className='work'>🥇: {data.work}</p>
                     <p className='license'>📄: {data.license}</p>
+                    <div className='col'>
+                        <img src={data.profileurl} />
+                        <p>{data.name}</p>
+                    </div>
                 </div>
             ))}
         </div>
