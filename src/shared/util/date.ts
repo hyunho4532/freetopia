@@ -2,7 +2,7 @@
 export const currentDate = () => {
     return new Intl.DateTimeFormat('ko-KR', {
         year: 'numeric',
-        month: '2-digit',
+        month: 'long',
         day: '2-digit'
-    })
+    }).format(new Date());
 }

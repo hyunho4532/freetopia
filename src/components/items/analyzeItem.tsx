@@ -26,14 +26,15 @@ export function AnalyzeItems({ data }: Props) {
                             work: data.todaywork,
                             tomowork: data.tomowork,
                             name: data.name,
-                            profileurl: data.profileurl
-                        }}}>
+                            profileurl: data.profileurl,
+                            currentdate: data.currentdate
+                        }}} shallow={false}>
                             <p className='status'>상태: {data.status}</p>
                         </Link>
                     </div>
-                    <p className='todayactivity'>오늘 활동: {data.todayactivity}</p>
-                    <p className='todaywork'>🥇: {data.todaywork}</p>
-                    <p className='tomowork'>내일 해야 할 일은? {data.tomowork}</p>
+                    <p className='todayactivity'>오늘 활동: {`${data.todayactivity.substring(0, 6)}...`}</p>
+                    <p className='todaywork'>🥇: {`${data.todaywork.substring(0, 12)}...`}</p>
+                    <p className='tomowork'>내일 해야 할 일은? {`${data.tomowork.substring(0, 4)}...`}</p>
                 </div>
             ))}
         </div>

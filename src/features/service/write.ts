@@ -34,6 +34,9 @@ export const writeClick = async (writeData: any) => {
 
 // 헤더에 분석함 클릭했을 때
 export const analyzeClick = async (analyzeData: any) => {
+
+    console.log(currentDate());
+
     try {
         await supabase.from('analyze').insert({
             status: analyzeData.status,
@@ -46,5 +49,6 @@ export const analyzeClick = async (analyzeData: any) => {
             currentdate: currentDate()
         })
     } catch (error) {
+        console.error(error);
     }
 }
