@@ -29,3 +29,8 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./fonts/PretendardVariable.woff2') format('woff2');
+}

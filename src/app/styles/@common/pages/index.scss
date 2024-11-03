@@ -1,0 +1,61 @@
+.body {
+    width: 1600px;
+    height: 740px;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 360px;
+    flex: 1;
+    margin-top: 24px;
+    margin-left: 230px;
+    background-color: floralwhite;
+}
+
+.content .title {
+    text-align: center;
+}
+
+.content .info {
+    margin-left: 16px;
+    display: flex;
+}
+
+.content .info .col {
+    flex-direction: column;
+}
+
+.content .info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+}
+
+.content .info p {
+    margin-left: 16px;
+}
+
+.content .first {
+    margin-top: 36px;
+    margin-left: 16px;
+}
+
+.content .second {
+    margin-top: 80px;
+    margin-left: 16px;
+}
+
+.content .third {
+    margin-top: 80px;
+    margin-left: 16px;
+}
+
+.content .four {
+    margin-top: 80px;
+    margin-left: 16px;
+}
+
+p {
+    font-weight: bold;
+}

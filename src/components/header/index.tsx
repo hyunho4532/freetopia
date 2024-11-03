@@ -21,14 +21,19 @@ export function Header({ userData }: Props) {
     const headersRef = useRef<HTMLDivElement[]>([]);
 
     const handleItemClick = (title: any) => {
-        if (title === "로그인") {
-            LoginPopup(dialogState.login);
-        }
-        else if (title === "작성함") {
-            WritePopup(dialogState.write);
-        }
-        else if (title === "분석함") {
-            AnalyzePopup(dialogState.analyze);
+        
+        var loginStatus = userData.id != '' ? "사용자" : "로그인"
+
+        if (loginStatus) {
+            if (loginStatus === "로그인") {
+                LoginPopup(dialogState.login);
+            } 
+            else if (title === "작성함") {
+                WritePopup(dialogState.write);
+            }
+            else if (title === "분석함") {
+                AnalyzePopup(dialogState.analyze);
+            }
         }
     }
 
@@ -44,15 +49,7 @@ export function Header({ userData }: Props) {
                             ref={(el: any) => (headersRef.current[index] = el!)}
                             onMouseOver={() => handleMouseOver(0, 14, index, headersRef, 1.2)}
                             onMouseLeave={() => handleMouseOut(0, 0, index, headersRef, 1)}>
-                            { data.title === "사용자" ? (
-                                userData.id != '' ? 
-                                    <p key={data.key}>{data.title}</p> :
-                                    <p key={data.key}>로그인</p>
-                            ) : (
-                                <p 
-                                    key={data.key}
-                                    onClick={() => handleItemClick(data.title)}>{data.title}</p>
-                                )}
+                            <p onClick={() => handleItemClick(data.title)}>{userData.id != '' && index === 0 ? '사용자' : data.title}</p>
                         </div>
                     ))}
                 </div>
