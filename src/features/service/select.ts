@@ -17,3 +17,9 @@ export const useSelectAnalyzeFindById = async (id: number) => {
     const { data } = await supabase.from('analyze').select().eq('id', id);
     return data;
 }
+
+// freetopia 테이블에 있는 상세 데이터 조회
+export const useSelectWriteFindById = async (id: number) => {
+    const { data } = await supabase.from('freetopia').select().eq('id', id);
+    return data;
+}

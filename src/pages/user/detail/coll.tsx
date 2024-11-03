@@ -1,17 +1,18 @@
-import { useSelectAnalyzeFindById } from '@/features/service/select';
+import { useSelectAnalyzeFindById, useSelectWriteFindById } from '@/features/service/select';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
 import 'styles@/@common/pages/index.scss';
 import 'styles@/@media/pages/index.scss';
 
-export default function Detail() {
+/** 사용자 수집 관련 상세 페이지 */
+export default function Coll() {
 
     const router = useRouter();
     const [_detailData, _setDetailData] = useState<any[]>([]);
 
     useMemo(() => {
-        useSelectAnalyzeFindById(parseInt(router.query.id as string))
+        useSelectWriteFindById(parseInt(router.query.id as string))
             .then(response => {
                 _setDetailData(response!);
             })
@@ -20,7 +21,7 @@ export default function Detail() {
     return (
         <>
             <Head>
-                <title>프리토피아 | 일과분석</title>
+                <title>프리토피아 | 사용자 수집</title>
                 <link rel='icon' href='/logo.png' />
             </Head>
             <div className='body'>
@@ -39,8 +40,8 @@ export default function Detail() {
                             </div>
 
                             <div className="first">
-                                <p>1. 상태 조회하기</p>
-                                <p>{data.status}</p>
+                                <p>1. 현재 직업은? </p>
+                                <p>{data.job}</p>
                             </div>
 
                             <div className="second">

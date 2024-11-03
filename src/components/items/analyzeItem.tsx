@@ -21,7 +21,7 @@ export function AnalyzeItems({ data }: Props) {
                         ref={(el: any) => (statusRef.current[index] = el!)}
                         onMouseOver={() => handleMouseOver(15, 0, index, statusRef, 1.15)}
                         onMouseLeave={() => handleMouseOut(0, 0, index, statusRef, 1)}>
-                        <Link href={{pathname: '/user/detail', query: {
+                        <Link href={{pathname: '/user/detail/analy', query: {
                             id: data.id
                         }}} shallow={false}>
                             <p className='status'>상태: {data.status}</p>
