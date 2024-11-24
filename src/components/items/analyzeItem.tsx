@@ -15,7 +15,7 @@ export function AnalyzeItems({ data }: Props) {
 
     return (
         <div className='items'>
-            { data.map((data: any, index: number) => (
+            { data?.map((data: any, index: number) => (
                 <div className='card'>
                     <div
                         ref={(el: any) => (statusRef.current[index] = el!)}
