@@ -15,7 +15,7 @@ export function WriteItems({ data }: Props) {
 
     return (
         <div className='items'>
-            { data.map((data: any, index: number) => (
+            { data?.map((data: any, index: number) => (
                 <div key={index} className='card'>
                     <div
                         ref={(el: any) => (jobRefs.current[index] = el!)}
